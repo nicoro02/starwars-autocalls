@@ -123,6 +123,9 @@ def main():
     nombre, usar_ratio = mejor["modelo"], mejor["target"] == "ratio"
     print(f"\nSeleccionado: {nombre} con target en {mejor['target']}")
 
+    print("\nMAE por corte del modelo elegido:")
+    print(walk_forward(desarrollo, nombre, usar_ratio).round(3).to_string())
+
     # Contraste, no validacion. Si el aleatorio saliera mucho mejor que el
     # temporal habria deriva y el modelo envejeceria rapido en produccion.
     tr, te = train_test_split(desarrollo, test_size=0.2, random_state=SEMILLA)
