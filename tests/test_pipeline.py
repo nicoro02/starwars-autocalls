@@ -10,7 +10,7 @@ Ejecutar con:
 import pandas as pd
 import pytest
 
-from src.data import MESES_ENTRE_OBSERVACIONES, limpiar_rfqs, normalizar_frecuencia, preparar
+from src.data import MESES_ENTRE_OBSERVACIONES, normalizar_frecuencia, preparar
 from src.features import FEATURES, construir, unir_volatilidad_pit
 
 
